@@ -1,0 +1,61 @@
+{
+  "brand": {
+    "name_ar": "وابل للعطور",
+    "name_en": "Wabil Perfumes",
+    "tagline_ar": "(وٌآبًلَ) للعطور",
+    "tagline_en": "W A B I L",
+    "description_ar": "تركيب جميع انواع العطور (رجالي/حريمي) بجوده عاليه. بفضل الله من اجود الخامات وأعلي تركيز وبأقل سعر",
+    "location": {
+      "area": "El Marg",
+      "area_ar": "المرج",
+      "city": "Cairo",
+      "country": "Egypt"
+    }
+  },
+  "social": {
+    "facebook": {
+      "url": "https://www.facebook.com/people/Wabil-perfumes-%D9%88%D8%A7%D8%A8%D9%84-%D9%84%D9%84%D8%B9%D8%B7%D9%88%D8%B1/61562720740266/",
+      "share_url": "https://www.facebook.com/share/18b5o68ui2/",
+      "page_id": "61562720740266",
+      "likes": 513,
+      "talking_about": 471
+    }
+  },
+  "contact": {
+    "phone": "01008657085",
+    "whatsapp": null
+  },
+  "visual_identity": {
+    "logo_path": "assets/facebook/profile-picture.jpg",
+    "colors": {
+      "primary": "#C9A84C",
+      "background": "#0F0D0B",
+      "text": "#F5F0E8",
+      "accent": "#8B6914"
+    },
+    "style": "luxury, dark background, gold accents, Arabic calligraphy"
+  },
+  "product_focus": {
+    "categories_confirmed": ["رجالي", "حريمي"],
+    "categories_pending": ["يونيسكس", "عطور صيفية", "عطور شتوية", "عطور النيش والبدائل العالمية"],
+    "usp": [
+      "خامات عالية الجودة",
+      "أعلى تركيز",
+      "أسعار تنافسية",
+      "تركيب مخصص"
+    ]
+  },
+  "products": [],
+  "images_extracted": [
+    {
+      "type": "profile_logo",
+      "path": "assets/facebook/profile-picture.jpg",
+      "source": "facebook_og_image"
+    }
+  ],
+  "extraction_limits": {
+    "posts": "Facebook requires login for posts/photos — not accessible via automated scraping",
+    "products": "Need manual export from page owner",
+    "prices": "Not found in public metadata"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "brand": {
+    "name_ar": "وابل للعطور",
+    "name_en": "Wabil Perfumes",
+    "pronunciation": "وٌآبِلَ",
+    "tagline_ar": "عطر يترك أثر",
+    "tagline_en": "MADE WITH ORGANIC INGREDIENTS. FEEL THE GOODNESS OF NATURE WITH OUR PRODUCTS.",
+    "slogan_emoji": "🖤✨"
+  },
+  "facebook": {
+    "page_id": "61562720740266",
+    "url": "https://www.facebook.com/people/Wabil-perfumes-%D9%88%D8%A7%D8%A8%D9%84-%D9%84%D9%84%D8%B9%D8%B7%D9%88%D8%B1/61562720740266/",
+    "share_url": "https://www.facebook.com/share/18b5o68ui2/",
+    "followers": 513,
+    "following": 39,
+    "talking_about": 471,
+    "rating_percent": 100,
+    "reviews_count": 9,
+    "category": "متجر عطور"
+  },
+  "location": {
+    "area_ar": "المرج",
+    "area_en": "El Marg",
+    "city_ar": "القاهرة",
+    "governorate_ar": "محافظة القاهرة",
+    "country": "Egypt"
+  },
+  "contact": {
+    "phone_primary": "01020103153",
+    "phone_secondary": "01008657085",
+    "email": "blalosama368@gmail.com",
+    "instagram": "cap_belalosama",
+    "website_suggested": "wabilperfumes.com"
+  },
+  "about": {
+    "bio_lines": [
+      "(وٌآبًلَ) للعطور",
+      "تركيب جميع انواع العطور (رجالي/حريمي) بجوده عاليه",
+      "بفضل الله من اجود الخامات وأعلى تركيز وبأقل سعر",
+      "«عطر يترك اثر»"
+    ],
+    "services": [
+      "التوصيل",
+      "طلبات خارجية",
+      "حجز على الإنترنت"
+    ],
+    "business_model": "تركيب وتصنيع عطور مخصصة بخامات عالية التركيز - بدائل عالمية ونيش"
+  },
+  "product_categories": [
+    {
+      "slug": "perfumes",
+      "name_ar": "عطور",
+      "name_en": "Perfumes",
+      "gender_split": ["رجالي", "حريمي", "يونيسكس"]
+    },
+    {
+      "slug": "musk",
+      "name_ar": "مسك",
+      "name_en": "Musk"
+    },
+    {
+      "slug": "incense",
+      "name_ar": "بخور",
+      "name_en": "Incense"
+    },
+    {
+      "slug": "prayer-beads",
+      "name_ar": "سبح",
+      "name_en": "Prayer Beads / Digital Tasbih"
+    },
+    {
+      "slug": "miswak",
+      "name_ar": "سواك",
+      "name_en": "Miswak"
+    },
+    {
+      "slug": "accessories",
+      "name_ar": "إكسسوارات",
+      "name_en": "Accessories",
+      "items": ["عبوات عينات", "مبخّرات عطر"]
+    }
+  ],
+  "products_identified_from_images": [
+    {
+      "name_ar": "سواك طيبة",
+      "name_en": "Tybah Sewak",
+      "category": "miswak"
+    },
+    {
+      "name_ar": "سواك المدينة",
+      "name_en": "Miswak Madina",
+      "category": "miswak"
+    },
+    {
+      "name_ar": "خاتم التسبيح الإلكتروني",
+      "name_en": "Digital Tasbih Ring",
+      "category": "prayer-beads",
+      "variants": ["ألوان متعددة", "مزخرف / عادي"]
+    },
+    {
+      "name_ar": "عبوات عينات عطر",
+      "name_en": "Perfume Sample Atomizers",
+      "category": "accessories",
+      "sizes_ml": [2, 5, 10, 30]
+    }
+  ],
+  "promotions": [
+    {
+      "date": "2025-06-05",
+      "title_ar": "عرض خاص | اشتري بـ 1000 جنيه واحصل على هدايا مجانية!",
+      "description_ar": "أي أوردر بـ 1000 جنيه أو أكتر هتاخد معاه هدايا مجانية",
+      "min_order_egp": 1000,
+      "type": "gift_with_purchase"
+    }
+  ],
+  "brand_identity": {
+    "colors": {
+      "primary": "#000000",
+      "accent": "#C9A227",
+      "background_dark": "#1A1A1A",
+      "text_light": "#FFFFFF"
+    },
+    "logo_description": "شعار دائري ذهبي بخط عربي وابل مع رمز بخاخ عطر، واسم W A B I L بالإنجليزية بخط serif متباعد",
+    "banner_categories_text": "عطور – مسك – بخور – سبح",
+    "style": "فاخر، داكن، ذهبي، طبيعي/عضوي"
+  },
+  "assets": {
+    "logo": "assets/profile-logo.jpg",
+    "cover_banner": "assets/fb_images/image_02.jpg",
+    "gallery_folder": "assets/fb_images/",
+    "images_count": 15
+  },
+  "website_implications": {
+    "free_shipping_threshold_suggested_egp": 1000,
+    "payment_methods": ["cod"],
+    "shipping_zones": ["القاهرة والجيزة", "الدلتا والقناة والإسكندرية", "الصعيد ومحافظات الحدود"],
+    "needs_from_owner": [
+      "قائمة أسماء العطور الفعلية مع الأسعار لكل حجم",
+      "صور عالية الجودة لكل عطر",
+      "الهرم العطري لكل منتج",
+      "عنوان المحل التفصيلي في المرج",
+      "ساعات العمل",
+      "تفاصيل هدايا عرض الـ 1000 جنيه"
+    ]
+  }
+}

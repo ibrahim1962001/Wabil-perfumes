@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-charcoal-dark text-white antialiased;
+  }
+
+  ::selection {
+    @apply bg-gold/30 text-white;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-gradient-to-l from-gold-light to-gold bg-clip-text text-transparent;
+  }
+}
