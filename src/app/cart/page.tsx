@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCart, getCartLineDetails } from "@/components/CartProvider";
-import { formatPrice } from "@/lib/brand";
+import { brand, formatPrice } from "@/lib/brand";
 
 export default function CartPage() {
   const { items, updateQuantity, removeItem, subtotal } = useCart();
@@ -95,6 +95,9 @@ export default function CartPage() {
       </div>
 
       <div className="mt-8 rounded-2xl border border-gold/20 bg-charcoal-light p-6">
+        <p className="mb-4 rounded-xl border border-gold/30 bg-gold/10 px-4 py-3 text-sm text-gold">
+          🎁 {brand.freeTesterPromo.subtitle}
+        </p>
         <div className="mb-4 flex justify-between text-lg">
           <span>المجموع</span>
           <span className="font-bold text-gold">{formatPrice(subtotal)}</span>

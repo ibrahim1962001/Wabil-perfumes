@@ -1,7 +1,6 @@
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import PromoBanner from "@/components/PromoBanner";
-import FreeTesterPromo from "@/components/FreeTesterPromo";
 import MuskOudPromo from "@/components/MuskOudPromo";
 import ServicesInfo from "@/components/ServicesInfo";
 import HeroVideo from "@/components/HeroVideo";
@@ -57,10 +56,6 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
         <MuskOudPromo />
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
-        <FreeTesterPromo />
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6">

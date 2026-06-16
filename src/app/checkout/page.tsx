@@ -252,6 +252,9 @@ export default function CheckoutPage() {
                 🎁 مبروك! طلبك يستحق هدايا مجانية (عرض 1000 ج.م)
               </p>
             )}
+            <p className="mt-4 rounded-lg border border-gold/30 bg-gold/5 p-3 text-xs text-gold">
+              🎁 {brand.freeTesterPromo.subtitle}
+            </p>
             {isCairoFree && shipping === 0 && (
               <p className="mt-2 text-xs text-green-400">
                 ✓ {brand.policies.cairoShipping}

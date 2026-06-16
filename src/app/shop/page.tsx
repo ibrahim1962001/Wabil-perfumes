@@ -85,6 +85,10 @@ function ShopContent() {
         ))}
       </div>
 
+      <p className="mb-6 rounded-xl border border-gold/30 bg-gold/5 px-4 py-3 text-sm text-gold">
+        🎁 {brand.freeTesterPromo.subtitle}
+      </p>
+
       <p className="mb-6 rounded-xl border border-gold/20 bg-gold/5 px-4 py-3 text-sm text-gold">
         {category === "musk"
           ? "عرض المسك والعود: من 30 ج.م (6 مل) — إلى 500 ج.م (100 مل) · توصيل مجاني في القاهرة 📌"
