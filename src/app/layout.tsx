@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cairo, Playfair_Display } from "next/font/google";
+import { Cairo } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,11 +10,7 @@ import { brand } from "@/lib/brand";
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
   variable: "--font-arabic",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-display",
+  display: "swap",
 });
 
 export const viewport: Viewport = {
@@ -33,6 +29,10 @@ export const metadata: Metadata = {
     locale: "ar_EG",
     type: "website",
   },
+  icons: {
+    icon: "/images/logo.jpg",
+    apple: "/images/logo.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body
-        className={`${cairo.variable} ${playfair.variable} font-arabic flex min-h-screen flex-col`}
+        className={`${cairo.variable} font-arabic flex min-h-screen flex-col`}
       >
         <CartProvider>
           <Header />
