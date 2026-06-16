@@ -33,9 +33,9 @@ export default function ProductPage() {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
-      <div className="grid gap-10 lg:grid-cols-2">
-        <div className="relative aspect-square overflow-hidden rounded-2xl border border-white/10 bg-charcoal">
+    <div className="container-main section-padding">
+      <div className="grid gap-6 lg:grid-cols-2 lg:gap-10">
+        <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-2xl border border-white/10 bg-charcoal lg:max-w-none">
           <Image
             src={product.images[0]}
             alt={product.nameAr}
@@ -55,7 +55,9 @@ export default function ProductPage() {
             <span className="text-white/70">{product.nameAr}</span>
           </nav>
 
-          <h1 className="mb-2 text-3xl font-bold">{product.nameAr}</h1>
+          <h1 className="mb-2 text-xl font-bold sm:text-2xl lg:text-3xl">
+            {product.nameAr}
+          </h1>
           <p className="mb-4 text-white/50">{product.nameEn}</p>
 
           <div className="mb-4 flex flex-wrap gap-2">
@@ -87,7 +89,7 @@ export default function ProductPage() {
                 <button
                   key={v.id}
                   onClick={() => setSelectedVariant(v.id)}
-                  className={`rounded-xl border px-4 py-3 text-sm transition ${
+                  className={`min-h-[52px] rounded-xl border px-3 py-2.5 text-sm transition-all duration-300 sm:px-4 sm:py-3 ${
                     selectedVariant === v.id
                       ? "border-gold bg-gold/10 text-gold"
                       : "border-white/10 hover:border-gold/40"
@@ -102,7 +104,7 @@ export default function ProductPage() {
             </div>
           </div>
 
-          <p className="mb-6 text-3xl font-bold text-gold">
+          <p className="mb-6 text-2xl font-bold text-gold sm:text-3xl">
             {formatPrice(variant.price)}
           </p>
 
@@ -110,14 +112,11 @@ export default function ProductPage() {
             <button
               onClick={handleAdd}
               disabled={!product.inStock}
-              className="flex-1 rounded-full bg-gold py-3 font-bold text-black transition hover:bg-gold-light disabled:opacity-50"
+              className="btn-primary flex-1 disabled:opacity-50"
             >
               {added ? "✓ تمت الإضافة" : "أضف للسلة"}
             </button>
-            <Link
-              href="/cart"
-              className="rounded-full border border-gold/40 px-8 py-3 text-gold transition hover:bg-gold/10"
-            >
+            <Link href="/cart" className="btn-outline px-6 sm:px-8">
               السلة
             </Link>
           </div>

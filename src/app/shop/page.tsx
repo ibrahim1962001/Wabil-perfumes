@@ -44,21 +44,24 @@ function ShopContent() {
   const womenCount = products.filter((p) => p.gender === "حريمي").length;
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
-      <div className="mb-8">
-        <h1 className="mb-2 text-3xl font-bold">المتجر</h1>
-        <p className="text-white/50">
+    <div className="container-main section-padding">
+      <div className="mb-6 sm:mb-8">
+        <h1 className="heading-section mb-2">المتجر</h1>
+        <p className="text-body">
           {menCount} عطر رجالي · {womenCount} عطر حريمي · 7 أحجام متاحة
         </p>
-        <p className="mt-2 text-sm text-white/40">{brand.policies.preOrder}</p>
+        <p className="mt-2 text-xs text-white/40 sm:text-sm">
+          {brand.policies.preOrder}
+        </p>
       </div>
 
-      <div className="mb-4 flex flex-wrap gap-2">
+      <div className="sticky top-[65px] z-30 -mx-4 mb-5 border-b border-white/5 bg-charcoal-dark/95 px-4 py-3 backdrop-blur-md sm:static sm:mx-0 sm:mb-6 sm:border-0 sm:bg-transparent sm:p-0 sm:backdrop-blur-none">
+        <div className="mb-3 flex gap-2 overflow-x-auto pb-1 scrollbar-none sm:flex-wrap sm:overflow-visible">
         {categoryFilters.map((f) => (
           <a
             key={f.value}
             href={`/shop?category=${f.value}${gender !== "الكل" ? `&gender=${gender}` : ""}`}
-            className={`rounded-full px-4 py-2 text-sm transition ${
+            className={`shrink-0 rounded-full px-4 py-2.5 text-sm transition-all duration-300 sm:py-2 ${
               isActiveCategory(f.value)
                 ? "bg-gold text-black"
                 : "border border-white/10 text-white/70 hover:border-gold/40"
@@ -67,14 +70,14 @@ function ShopContent() {
             {f.label}
           </a>
         ))}
-      </div>
+        </div>
 
-      <div className="mb-8 flex flex-wrap gap-2">
+        <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none sm:flex-wrap sm:overflow-visible">
         {genderFilters.map((g) => (
           <a
             key={g.value}
             href={`/shop?category=${category}${g.value !== "الكل" ? `&gender=${g.value}` : ""}`}
-            className={`rounded-full px-3 py-1.5 text-xs transition ${
+            className={`shrink-0 rounded-full px-3 py-2 text-xs transition-all duration-300 sm:py-1.5 ${
               gender === g.value
                 ? "bg-white/10 text-gold"
                 : "text-white/50 hover:text-gold"
@@ -83,13 +86,14 @@ function ShopContent() {
             {g.label}
           </a>
         ))}
+        </div>
       </div>
 
-      <p className="mb-6 rounded-xl border border-gold/30 bg-gold/5 px-4 py-3 text-sm text-gold">
+      <p className="mb-4 rounded-xl border border-gold/30 bg-gold/5 px-4 py-3 text-xs text-gold sm:mb-6 sm:text-sm">
         🎁 {brand.freeTesterPromo.subtitle}
       </p>
 
-      <p className="mb-6 rounded-xl border border-gold/20 bg-gold/5 px-4 py-3 text-sm text-gold">
+      <p className="mb-4 rounded-xl border border-gold/20 bg-gold/5 px-4 py-3 text-xs text-gold sm:mb-6 sm:text-sm">
         {category === "musk"
           ? "عرض المسك والعود: من 30 ج.م (6 مل) — إلى 500 ج.م (100 مل) · توصيل مجاني في القاهرة 📌"
           : "من 25 ج.م (رول 6 مل) — إلى 400 ج.م (100 مل) · توصيل مجاني في القاهرة 📌"}
@@ -98,7 +102,7 @@ function ShopContent() {
       {filtered.length === 0 ? (
         <p className="py-20 text-center text-white/50">لا توجد منتجات</p>
       ) : (
-        <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4 xl:gap-6">
           {filtered.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

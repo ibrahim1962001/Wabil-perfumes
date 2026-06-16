@@ -6,7 +6,8 @@ export default function WhatsAppButton() {
       href={whatsappLink("مرحباً، عايز أستفسر عن منتجات وابل للعطور")}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-2xl shadow-lg shadow-black/40 transition hover:scale-110"
+      className="fixed bottom-5 left-4 z-50 flex h-14 w-14 animate-pulse-ring items-center justify-center rounded-full bg-[#25D366] shadow-lg shadow-black/50 transition-transform duration-300 hover:scale-110 active:scale-95 sm:bottom-6 sm:left-6"
+      style={{ marginBottom: "env(safe-area-inset-bottom)" }}
       aria-label="تواصل عبر واتساب"
     >
       <svg viewBox="0 0 24 24" className="h-7 w-7 fill-white">

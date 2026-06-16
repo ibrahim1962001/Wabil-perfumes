@@ -70,3 +70,12 @@ export interface Order {
   status: "pending" | "confirmed" | "preparing" | "shipped" | "delivered" | "returned";
   createdAt: string;
 }
+
+export interface Review {
+  id: string;
+  name: string;
+  rating: number;
+  comment: string;
+  createdAt: string;
+  source?: "seed" | "customer";
+}

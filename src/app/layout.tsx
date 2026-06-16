@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cairo, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -16,6 +16,12 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-display",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0F0D0B",
+};
 
 export const metadata: Metadata = {
   title: `${brand.nameAr} | ${brand.nameEn}`,
@@ -41,7 +47,7 @@ export default function RootLayout({
       >
         <CartProvider>
           <Header />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 animate-fade-in pb-safe">{children}</main>
           <Footer />
           <WhatsAppButton />
         </CartProvider>
