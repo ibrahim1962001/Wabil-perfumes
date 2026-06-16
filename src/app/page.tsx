@@ -2,6 +2,7 @@ import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import PromoBanner from "@/components/PromoBanner";
 import FreeTesterPromo from "@/components/FreeTesterPromo";
+import MuskOudPromo from "@/components/MuskOudPromo";
 import ServicesInfo from "@/components/ServicesInfo";
 import HeroVideo from "@/components/HeroVideo";
 import { brand } from "@/lib/brand";
@@ -55,6 +56,10 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
+        <MuskOudPromo />
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
         <FreeTesterPromo />
       </section>
 
@@ -102,7 +107,7 @@ export default function HomePage() {
         <div className="mb-8 flex items-end justify-between">
           <div>
             <h2 className="text-2xl font-bold text-white">الأكثر طلباً</h2>
-            <p className="text-white/50">سوفاج · وان مليون · بكرات روج · اسكاندل</p>
+            <p className="text-white/50">يارا كاندي · سوفاج · وان مليون · اسكاندل</p>
           </div>
           <Link href="/shop" className="text-sm text-gold hover:underline">
             عرض الكل ←

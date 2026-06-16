@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { brand } from "@/lib/brand";
-import { SIZE_VARIANTS } from "@/lib/products";
+import { SIZE_VARIANTS, MUSK_OUD_SIZE_VARIANTS } from "@/lib/products";
 
 export default function AboutPage() {
   return (
@@ -27,7 +27,7 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-12 rounded-2xl border border-gold/20 bg-charcoal-light p-6">
-        <h3 className="mb-4 text-center font-bold text-gold">الأحجام والأسعار</h3>
+        <h3 className="mb-4 text-center font-bold text-gold">أسعار العطور</h3>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {SIZE_VARIANTS.map((v) => (
             <div
@@ -45,6 +45,26 @@ export default function AboutPage() {
         </div>
         <p className="mt-4 text-center text-xs text-white/50">
           {brand.freeTesterPromo.subtitle}
+        </p>
+      </div>
+
+      <div className="mt-8 rounded-2xl border border-gold/20 bg-charcoal-light p-6">
+        <h3 className="mb-4 text-center font-bold text-gold">
+          {brand.muskOudPromo.title}
+        </h3>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {MUSK_OUD_SIZE_VARIANTS.map((v) => (
+            <div
+              key={v.size}
+              className="rounded-xl border border-white/10 bg-charcoal-dark p-3 text-center"
+            >
+              <p className="text-sm text-white/80">{v.size}</p>
+              <p className="font-bold text-gold">{v.price} ج.م</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4 text-center text-xs text-white/50">
+          {brand.muskOudPromo.subtitle}
         </p>
       </div>
 
@@ -66,6 +86,9 @@ export default function AboutPage() {
               <li key={s}>✓ {s}</li>
             ))}
             <li>✓ {brand.policies.cairoShipping}</li>
+            {brand.paymentMethods.map((m) => (
+              <li key={m}>✓ {m}</li>
+            ))}
           </ul>
         </div>
       </div>

@@ -40,7 +40,7 @@ export default function ProductPage() {
             src={product.images[0]}
             alt={product.nameAr}
             fill
-            className="object-cover"
+            className={product.imageFit === "contain" ? "object-contain bg-white" : "object-cover"}
             priority
             sizes="(max-width:1024px) 100vw, 50vw"
           />

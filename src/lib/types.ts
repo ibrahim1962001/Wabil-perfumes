@@ -31,6 +31,7 @@ export interface Product {
   notes?: FragranceNotes;
   featured?: boolean;
   inStock: boolean;
+  imageFit?: "cover" | "contain";
 }
 
 export interface CartItem {
@@ -65,7 +66,7 @@ export interface Order {
   shipping: number;
   discount: number;
   total: number;
-  paymentMethod: "cod";
+  paymentMethod: "cod" | "vodafone" | "instapay";
   status: "pending" | "confirmed" | "preparing" | "shipped" | "delivered" | "returned";
   createdAt: string;
 }

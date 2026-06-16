@@ -23,6 +23,7 @@ export default function CheckoutPage() {
   const [couponCode, setCouponCode] = useState("");
   const [discount, setDiscount] = useState(0);
   const [couponMsg, setCouponMsg] = useState("");
+  const [paymentMethod, setPaymentMethod] = useState<"cod" | "vodafone" | "instapay">("cod");
   const [submitting, setSubmitting] = useState(false);
   const [orderId, setOrderId] = useState<string | null>(null);
 
@@ -61,7 +62,7 @@ export default function CheckoutPage() {
       shipping,
       discount,
       total,
-      paymentMethod: "cod" as const,
+      paymentMethod,
       status: "pending" as const,
       createdAt: new Date().toISOString(),
     };
@@ -81,7 +82,12 @@ export default function CheckoutPage() {
         <h1 className="mb-2 text-2xl font-bold text-gold">تم تأكيد طلبك!</h1>
         <p className="mb-2 text-white/70">رقم الطلب: {orderId}</p>
         <p className="mb-8 text-sm text-white/50">
-          هنتواصل معاك على {phone} لتأكيد الطلب. الدفع عند الاستلام.
+          هنتواصل معاك على {phone} لتأكيد الطلب.{" "}
+          {paymentMethod === "cod"
+            ? "الدفع عند الاستلام."
+            : paymentMethod === "vodafone"
+              ? "الدفع بفودافون كاش."
+              : "الدفع بـ Instapay."}
         </p>
         <Link href="/shop" className="text-gold hover:underline">
           متابعة التسوق
@@ -169,6 +175,33 @@ export default function CheckoutPage() {
               {couponMsg}
             </p>
           )}
+
+          <div>
+            <label className="mb-2 block text-sm text-white/60">طريقة الدفع</label>
+            <div className="grid gap-2 sm:grid-cols-3">
+              {(
+                [
+                  { id: "cod", label: "💵 الدفع عند الاستلام", desc: "Cash عند الاستلام" },
+                  { id: "vodafone", label: "📱 فودافون كاش", desc: "تحويل أثناء الطلب" },
+                  { id: "instapay", label: "💳 Instapay", desc: "تحويل فوري" },
+                ] as const
+              ).map((method) => (
+                <button
+                  key={method.id}
+                  type="button"
+                  onClick={() => setPaymentMethod(method.id)}
+                  className={`rounded-xl border p-4 text-right text-sm transition ${
+                    paymentMethod === method.id
+                      ? "border-gold bg-gold/10 text-gold"
+                      : "border-white/10 hover:border-gold/40"
+                  }`}
+                >
+                  <p className="font-medium">{method.label}</p>
+                  <p className="mt-1 text-xs opacity-70">{method.desc}</p>
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="lg:col-span-2">
@@ -234,8 +267,12 @@ export default function CheckoutPage() {
             )}
 
             <div className="mt-6 rounded-xl bg-white/5 p-4 text-sm">
-              <p className="mb-1 font-medium">💵 الدفع عند الاستلام (COD)</p>
-              <p className="text-white/50">ادفع لما تستلم الأوردر</p>
+              <p className="mb-2 font-medium">طرق الدفع المتاحة</p>
+              <ul className="space-y-1 text-white/50">
+                {brand.paymentMethods.map((m) => (
+                  <li key={m}>✓ {m}</li>
+                ))}
+              </ul>
             </div>
 
             <button

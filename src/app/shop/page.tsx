@@ -86,7 +86,9 @@ function ShopContent() {
       </div>
 
       <p className="mb-6 rounded-xl border border-gold/20 bg-gold/5 px-4 py-3 text-sm text-gold">
-        من 25 ج.م (رول 6 مل) — إلى 400 ج.م (100 مل) · توصيل مجاني في القاهرة 📌
+        {category === "musk"
+          ? "عرض المسك والعود: من 30 ج.م (6 مل) — إلى 500 ج.م (100 مل) · توصيل مجاني في القاهرة 📌"
+          : "من 25 ج.م (رول 6 مل) — إلى 400 ج.م (100 مل) · توصيل مجاني في القاهرة 📌"}
       </p>
 
       {filtered.length === 0 ? (
